@@ -53,7 +53,13 @@ public class GuiOutput {
 	public static void InitGui() {
 		JFrame gui = new JFrame();
 		
+		gui.setTitle("GuiGame Thing");
+		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		gui.setSize(500, 500);
+		gui.add(new Label("Enter Name: " , Label.LEFT));
+		
+		gui.setVisible(true);
 	}
 
 }
