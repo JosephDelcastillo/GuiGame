@@ -1,5 +1,6 @@
 
 import java.awt.*;
+import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
@@ -51,15 +52,24 @@ public class GuiOutput {
 	}
 	
 	public static void InitGui() {
-		JFrame gui = new JFrame();
-		
-		gui.setTitle("GuiGame Thing");
+		JFrame gui = new JFrame("GuiGame Thing");
 		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		gui.setSize(500, 500);
-		gui.add(new Label("Enter Name: " , Label.LEFT));
+		Label nameLabel = new Label("Name:");
+		TextField nameInput = new TextField();
+		JButton nameConfirm = new JButton("Confirm");
+		
+		gui.add(nameLabel);
+		gui.add(nameInput);
+		gui.add(nameConfirm);
+		
+		
+		
+		gui.setLayout(new GridLayout(1,3));
+		gui.setSize(300, 65);
 		
 		gui.setVisible(true);
 	}
+	
 
 }
